@@ -1,0 +1,46 @@
+{
+  "id": "forge",
+  "name": "Forge",
+  "version": "0.1.0",
+  "description": "Agnx 外置子应用：nihalashetty/Forge 整仓 + Next.js 控制台（同源反代 /api/forge）+ FastAPI/LangGraph 引擎",
+  "engines": {
+    "agnx": ">=1.0.0"
+  },
+  "main": "./dist/index.js",
+  "icon": "./assets/forge-icon-light.svg",
+  "iconDark": "./assets/forge-icon-dark.svg",
+  "sidecar": {
+    "supervised": true,
+    "ensureTool": ".agnx/tools/ensure-forge-web.mjs",
+    "stateFile": "forge-web.json",
+    "defaultPort": 8106
+  },
+  "guest": {
+    "kind": "web",
+    "auth": "none",
+    "capabilities": [
+      "cookies",
+      "websocket"
+    ],
+    "preferStrategy": "guest-webview"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "id": "forge.open",
+        "title": "Forge"
+      }
+    ],
+    "panels": [
+      {
+        "id": "forge.main",
+        "title": "Forge"
+      }
+    ]
+  },
+  "platforms": {
+    "desktop": "supported",
+    "web": "supported",
+    "mobile": "unsupported"
+  }
+}

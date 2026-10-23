@@ -1,0 +1,10 @@
+{
+  "appId": "forge",
+  "installState": "installed",
+  "launchMode": "packaged",
+  "source": {
+    "kind": "github",
+    "url": "https://github.com/nihalashetty/Forge"
+  },
+  "updatedAt": "2026-10-19T19:45:00.000Z"
+}
